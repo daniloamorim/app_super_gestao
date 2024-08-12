@@ -47,14 +47,14 @@ class CreateUnidadesTable extends Migration
             //remover fk
             $table->dropForeign('produtos_detalhes_unidade_id_foreign'); //[tabela]_[coluna]_foreign
             //remover coluna
-            $table->dorpColumn('unidade_id');
+            $table->dropColumn('unidade_id');
         });
         //remover relacionamento com produtos
         Schema::table('produtos', function (Blueprint $table){
             //remover fk
             $table->dropForeign('produtos_unidade_id_foreign'); //[tabela]_[coluna]_foreign
             //remover coluna
-            $table->dorpColumn('unidade_id');
+            $table->dropColumn('unidade_id');
         });
 
         Schema::dropIfExists('unidades');
