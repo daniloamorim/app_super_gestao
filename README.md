@@ -8,6 +8,7 @@
 -  Models - migrations, relacionamentos.
 -  Seeders/Eloquent/Tinker
 -  Gravação de dados no Banco de dados, repopulando inputs com metodo old().
+-  Add Factory/ Middlewares
 
 ### Precisei relembrar muitas coisas e sou muito grato por terem me tirado da zona de conforto, espero que que seja suficiente para seguir, estou disposto a me aperfeiçoar sempre e busquei demonstrar que sou capaz de aprender de forma rapida, sobre a imagem sei como tratar apesar que no projeto acabei me perdendo e esquecendo de colocar ela para salvar. 
 ### pode baixar o projeto e rodar com diretamente no terminal do vsCode pelo comando: 
@@ -17,4 +18,3 @@ use sg;
 - execute as migrations: php artisan migrate
 - execute as seeders: php artisan db:seed
 
-Isso é parte do conhecimento que adiquiri com laravel nessas ultimas 48 horas, antes havia trabalhado com codeIgniter e muito específico para rotinas de callcenter.

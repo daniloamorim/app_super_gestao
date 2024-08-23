@@ -15,7 +15,7 @@ $factory->define(SiteContato::class, function (Faker $faker) {
         'nome' => $faker -> name,
         'telefone' => $faker -> tollFreePhoneNumber,
         'email' => $faker -> unique() -> email,
-        'motivo_contato' => $faker -> numberBetween ,
+        'motivo_contatos' => $faker -> numberBetween ,
         'mensagem' => $faker -> text(200)
     ];
 });
