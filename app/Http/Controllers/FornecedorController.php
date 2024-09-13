@@ -35,7 +35,7 @@ class FornecedorController extends Controller
             $feedback = [
                 'required' => 'O campo :attribute deve ser preenchido.',
                 'nome.min' => 'O campo nome deve ter no minimo 3 caracteres.',
-                'nome.max' => 'O campo nome deve ter no maximo 3 caracteres.',
+                'nome.max' => 'O campo nome deve ter no maximo 40 caracteres.',
                 'uf.min' => 'O campo UF deve ter no minimo 2 caracteres.',
                 'uf.max' => 'O campo UF deve ter no maximo 2 caracteres.',
                 'email.email' => 'O campo email não foi preenchido corretamente.'
@@ -72,5 +72,14 @@ class FornecedorController extends Controller
 
         return view('app.fornecedor.adicionar',['fornecedor' => $fornecedor, 'msg' => $msg]);
 
+    }
+
+    public function excluir($id){
+        //softDelete exclui mas não remove do banco de dados
+        Fornecedor::find($id)->delete();
+        //forceDelete remove o dado do banco permanentemente
+        //Fornecedor::find($id)->forceDelete();
+
+        return redirect()->route('app.fornecedor');
     }
 }
